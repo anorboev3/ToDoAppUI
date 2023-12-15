@@ -11,6 +11,7 @@ export interface ToDoItemModel {
 export interface ToDoItemsListModel {
   totalCount: number;
   currentPageCount: number;
+  totalActiveCount: number;
   toDoItems: ToDoItemModel[];
 }
 

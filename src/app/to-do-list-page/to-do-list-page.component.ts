@@ -41,6 +41,7 @@ import {
 export class ToDoListPageComponent implements OnInit {
   toDoItems!: ToDoItemModel[];
   totalCount!: number;
+  totalActiveCount!: number;
   pageSize: number = 10;
   pageNumber: number = 1;
   status!: ToDoItemStatus;
@@ -92,6 +93,7 @@ export class ToDoListPageComponent implements OnInit {
         (response: any) => {
           this.toDoItems = response.toDoItems;
           this.totalCount = response.totalCount;
+          this.totalActiveCount = response.totalActiveCount;
         },
         (error) => {
           alert(error.error);
